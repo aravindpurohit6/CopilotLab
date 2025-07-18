@@ -1,0 +1,19 @@
+<!-- /workspaces/CopilotLab/templates/add_payment_account.html -->
+
+<h2>Add Payment Account</h2>
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div>
+            {{ field.label_tag }}
+            {% if field.name == 'payment_amount' or field.name == 'fee_amount' %}
+                ₹
+            {% endif %}
+            {{ field }}
+            {% if field.help_text %}<small>{{ field.help_text }}</small>{% endif %}
+            {% for error in field.errors %}<span style="color:red">{{ error }}</span>{% endfor %}
+        </div>
+    {% endfor %}
+    <button type="submit">Add Account</button>
+</form>
+<a href="{% url 'payment_account_list' %}">Back to Account List</a>

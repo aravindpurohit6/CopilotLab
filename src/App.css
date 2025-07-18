@@ -1,0 +1,46 @@
+/* Responsive styles for payment app */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+.payment-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.fee-info {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.review-list, .payment-list {
+  list-style: none;
+  padding: 0;
+}
+.review-list li, .payment-list li {
+  margin-bottom: 0.5rem;
+}
+.form-section, .review-section, .confirm-section {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.tx-id {
+  font-weight: bold;
+  color: #6c63ff;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .form-section, .review-section, .confirm-section {
+    padding: 0.5rem;
+  }
+  .payment-form input {
+    font-size: 0.9rem;
+  }
+}

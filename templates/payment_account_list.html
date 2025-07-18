@@ -1,0 +1,9 @@
+<!-- /workspaces/CopilotLab/templates/payment_account_list.html -->
+
+<h2>Payment Accounts</h2>
+<ul>
+    {% for account in accounts %}
+        <li>{{ account.account_name }} ({{ account.account_number }})</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_payment_account' %}">Add New Account</a>
